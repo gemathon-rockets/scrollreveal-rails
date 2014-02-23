@@ -12,11 +12,21 @@ Add the gem to the Gemfile:
 
 In your JavaScript manifest (e.g. `application.js`):
 
-    //= require scrollreveal
+    //= require scrollReveal
 
-Include the following JavaScript just before the closing </body> tag :
 
-window.scrollReveal = new scrollReveal();
+Load scrollreveal in your Dom
+
+	$(function() {
+	  window.scrollReveal = new scrollReveal();
+	});
+
+In your View
+
+	#index.html.haml
+
+	scroll_reveal(content: 'hello',animation: "enter right after 4s")
+
 
 ## Licensing
 
