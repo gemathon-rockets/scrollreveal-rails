@@ -92,6 +92,16 @@ You can easily combine the above pairs to create more dynamic reveal animations.
 	scroll_reveal content: 'Baz', animation: 'enter top move 50px, after 0.6s'
 	scroll_reveal content: 'Mel', animation: 'enter top move 50px, after 0.9s'
 
+####Passing Blocks
+You can easily pass a block too.
+
+*Example:*
+
+	scroll_reveal animation: 'enter top move 50px' do 
+	  image_tag 'foo.jpg'
+	end
+	
+
 #### Fillers (optional)
 You can use conjoining filler words for more readable language.
 
