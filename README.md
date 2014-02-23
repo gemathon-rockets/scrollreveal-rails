@@ -1,4 +1,0 @@
-scrollreveal-rails
-==================
-
-Coming Soon

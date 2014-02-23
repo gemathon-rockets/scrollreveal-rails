@@ -1,4 +1,4 @@
-# Scrollreveal-Rails (To be Updated more..)
+# Scrollreveal-Rails 
 
 A Ruby wrapper to integrate [scrollReveal](https://github.com/julianlloyd/scrollReveal.js) - A small library to create and maintain how elements fade in, triggered when they enter the viewport.
 
