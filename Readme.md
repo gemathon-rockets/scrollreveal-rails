@@ -2,6 +2,8 @@
 
 A Ruby wrapper to integrate [scrollReveal](https://github.com/julianlloyd/scrollReveal.js) - A small library to create and maintain how elements fade in, triggered when they enter the viewport.
 
+
+See the [demo application](http://fast-waters-6745.herokuapp.com) in action. 
 ## Installation
 
 Add the gem to the Gemfile:
