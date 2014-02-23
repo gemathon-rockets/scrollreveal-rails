@@ -10,22 +10,117 @@ Add the gem to the Gemfile:
 
 ## Usage
 
-In your JavaScript manifest (e.g. `application.js`):
+Add ScrollReveal to your JS
+Append the following lines to your app/assets/javascripts/application.js file:
 
-    //= require scrollReveal
-
-
-Load scrollreveal in your Dom
+	//= require scrollReveal
 
 	$(function() {
 	  window.scrollReveal = new scrollReveal();
 	});
 
-In your View
 
-	#index.html.haml
+```
+Basic Usage
+-----------
 
-	scroll_reveal(content: 'hello',animation: "enter right after 4s")
+In your view `*.html.erb` or `*.html.haml`
+
+```
+<!-- Reveal using defaults. -->
+scroll_reveal content: 'Holla!'
+
+```
+**But wait!** It’s more fun if you define your own reveal animation parameters, which you can do using using natural, declarative language:
+```html
+<!-- Reveal using custom parameters. -->
+scroll_reveal content: 'Foo', animation: 'enter left and move 50px over 1.33s'
+scroll_reveal content: 'Bar', animation: 'enter from the bottom after 1s'
+scroll_reveal content: 'Baz' animation: 'wait 2.5s and then ease-in-out 100px'
+```
+
+Getting Started
+---------------
+What you enter into the `data-scrollReveal` attribute is parsed for specific words:
+
+- **keywords** that expect to be followed by a **value**.<br><br>
+- **fillers** as natural language sugar. (optional)
+
+#### Keywords and Values
+These specific **keyword** / **value** pairs allow you to describe basic reveal animation behavior.
+***
+**keyword:** `enter` — Controls the vector origin of your reveal animation.<br>
+**value:** `top` | `right` | `bottom` | `left`<br><br>
+*Example:*
+```html
+<!-- Reveal your element with a downward motion. -->
+
+scroll_reveal content: 'Foo', animation: 'enter top'
+```
+***
+**keyword:** `move` — The distance your revealing element travels.<br>
+**value:** [ integer ]px.
+
+*Example:*
+```html
+scroll_reveal content: 'Foo', animation: 'move 24px'
+
+```
+***
+**keyword:** `over` — The duration of your reveal animation.<br>
+**value:** [ decimal ]s
+
+
+*Example:*
+```html
+scroll_reveal content: 'Foo', animation: 'over 1.66s'
+
+```
+***
+**keyword:** `after/wait` — The duration before your reveal begins.<br>
+**value:** [ decimal ]s
+
+
+*Example:*
+```html
+<!-- Both are accepted. -->
+
+scroll_reveal content: 'Mel', animation: 'after 0.33s'
+scroll_reveal content: 'Mel', animation: 'wait 0.33s'
+
+```
+
+####Combining Keyword/Value Pairs
+You can easily combine the above pairs to create more dynamic reveal animations.
+
+*Example:*
+```html
+scroll_reveal content: 'Foo', animation: 'enter top move 50px'
+scroll_reveal content: 'Bar', animation: 'enter top move 50px, after 0.3s'
+scroll_reveal content: 'Baz', animation: 'enter top move 50px, after 0.6s'
+scroll_reveal content: 'Mel', animation: 'enter top move 50px, after 0.9s'
+
+```
+
+#### Fillers (optional)
+You can use conjoining filler words for more readable language.
+
+- `from`
+- `the`
+- `and`
+- `then`
+- `but`
+- `with`
+- `,`
+
+*Example*:
+```html
+<!-- These 4 lines are equivalent. -->
+
+scroll_reveal content: 'Foo', animation: 'wait 0.3s, then enter left and move 40px over 2s'
+scroll_reveal content: 'Bar', animation: 'enter from the left after 0.3s, move 40px, over 2s'
+scroll_reveal content: 'Baz', animation: 'enter left move 40px over 2s after 0.3s'
+scroll_reveal content: 'Mel', animation: 'enter left, move 40px, over 2s, wait 0.3s'
 
 
 ## Licensing
