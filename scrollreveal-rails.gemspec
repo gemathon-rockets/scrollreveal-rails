@@ -5,10 +5,10 @@ require "scrollreveal/version"
 Gem::Specification.new do |s|
   s.name        = "scrollreveal-rails"
   s.version     = Scrollreveal::VERSION
-  s.authors     = ["Ekta Verma"]
+  s.authors     = ["Ankit Gupta"," Ekta Verma"]
   s.date        = '2014-02-23'
-  s.email       = ["eku4evr@gmail.com"]
-  s.summary     = %q{Gem for easily adding ScrollReveal to the Rails Asset Pipeline}
+  s.email       = ["ankit.gupta8898@gmail.com","eku4evr@gmail.com"]
+  s.summary     = %q{Ruby Wrapper on top of ScrollReveal.js}
   s.description = %q{Gem that includes ScrollReveal (A small library to create and maintain how elements fade in,triggered when they enter the viewport.)}
 
   s.files         = `git ls-files`.split("\n")
