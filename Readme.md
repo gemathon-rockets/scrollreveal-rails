@@ -25,19 +25,15 @@ Basic Usage
 
 In your view `*.html.erb` or `*.html.haml`
 
-```
-<!-- Reveal using defaults. -->
-scroll_reveal content: 'Holla!'
+	<!-- Reveal using defaults. -->
+	scroll_reveal content: 'Holla!'
 
-```
 **But wait!** It’s more fun if you define your own reveal animation parameters, which you can do using using natural, declarative language:
 
-```
-<!-- Reveal using custom parameters. -->
-scroll_reveal content: 'Foo', animation: 'enter left and move 50px over 1.33s'
-scroll_reveal content: 'Bar', animation: 'enter from the bottom after 1s'
-scroll_reveal content: 'Baz' animation: 'wait 2.5s and then ease-in-out 100px'
-```
+	<!-- Reveal using custom parameters. -->
+	scroll_reveal content: 'Foo', animation: 'enter left and move 50px over 1.33s'
+	scroll_reveal content: 'Bar', animation: 'enter from the bottom after 1s'
+	scroll_reveal content: 'Baz' animation: 'wait 2.5s and then ease-in-out 100px'
 
 Getting Started
 ---------------
@@ -52,6 +48,7 @@ These specific **keyword** / **value** pairs allow you to describe basic reveal 
 **keyword:** `enter` — Controls the vector origin of your reveal animation.<br>
 **value:** `top` | `right` | `bottom` | `left`<br><br>
 *Example:*
+
 	<!-- Reveal your element with a downward motion. -->
 
 	scroll_reveal content: 'Foo', animation: 'enter top'
@@ -122,3 +119,4 @@ You can use conjoining filler words for more readable language.
 The gem itself is released under the MIT license
 
 :pray:
+	
